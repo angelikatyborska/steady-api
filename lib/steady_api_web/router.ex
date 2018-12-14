@@ -13,6 +13,12 @@ defmodule SteadyAPIWeb.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/api", SteadyAPIWeb do
+    pipe_through :api
+
+    get "/earnings", EarningsController, :index
+  end
+
   scope "/", SteadyAPIWeb do
     pipe_through :browser
 

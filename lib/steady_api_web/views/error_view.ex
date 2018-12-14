@@ -1,6 +1,15 @@
 defmodule SteadyAPIWeb.ErrorView do
   use SteadyAPIWeb, :view
 
+  def render("422.json", %{reason: reason}) do
+    %{
+      error: %{
+        reason: reason,
+        status: 422
+      }
+    }
+  end
+
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.
   # def render("500.html", _assigns) do
