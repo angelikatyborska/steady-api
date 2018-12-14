@@ -1,5 +1,9 @@
 # SteadyAPI
 
+This is a solution to a recruitment task. The task definition can be found in `TASK.md`.
+
+## Setup
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
