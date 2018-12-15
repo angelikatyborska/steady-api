@@ -18,10 +18,28 @@ defmodule SteadyAPIWeb.ErrorViewTest do
   end
 
   test "renders 404.html" do
-    assert render_to_string(SteadyAPIWeb.ErrorView, "404.html", []) == "Not Found"
+    actual = render(SteadyAPIWeb.ErrorView, "404.json", [])
+
+    expected = %{
+      error: %{
+        reason: "Not Found",
+        status: 404
+      }
+    }
+
+    assert actual == expected
   end
 
   test "renders 500.html" do
-    assert render_to_string(SteadyAPIWeb.ErrorView, "500.html", []) == "Internal Server Error"
+    actual = render(SteadyAPIWeb.ErrorView, "500.json", [])
+
+    expected = %{
+      error: %{
+        reason: "Internal Server Error",
+        status: 500
+      }
+    }
+
+    assert actual == expected
   end
 end

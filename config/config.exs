@@ -13,9 +13,7 @@ config :steady_api,
 # Configures the endpoint
 config :steady_api, SteadyAPIWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "4DEFJw7DQ1w+WSENGuzaL+snifKVkTmFjSSvtDJvLF+B58iulSMLuKth0R14/dHf",
-  render_errors: [view: SteadyAPIWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: SteadyAPI.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: SteadyAPIWeb.ErrorView, accepts: ~w(json)]
 
 # Configures Elixir's Logger
 config :logger, :console,

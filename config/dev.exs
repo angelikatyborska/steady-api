@@ -41,10 +41,7 @@ config :steady_api, SteadyAPIWeb.Endpoint,
 config :steady_api, SteadyAPIWeb.Endpoint,
   live_reload: [
     patterns: [
-      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
-      ~r{priv/gettext/.*(po)$},
-      ~r{lib/steady_api_web/views/.*(ex)$},
-      ~r{lib/steady_api_web/templates/.*(eex)$}
+      ~r{lib/steady_api_web/views/.*(ex)$}
     ]
   ]
 
