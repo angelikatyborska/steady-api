@@ -35,7 +35,8 @@ defmodule SteadyAPI.MixProject do
       {:phoenix, "~> 1.4.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:cors_plug, "~> 2.0"}
     ]
   end
 end
